@@ -51,22 +51,33 @@ function Home() {
 }
 
 function PageOne() {
+  const arr = [1,2,3,4,5,6,7,8,9,10]
   return (
     <>
       <h2>Page One</h2>
-      <div className="strawberry"></div>
-      <h3>Strawberry</h3>
+      {arr.map(i => (
+        <div className="random" key={i}>
+          <img src={`https://picsum.photos/200/300?random=${i}`} alt="random pic" />
+          <p>{i}. I am a caption</p>
+        </div>
+      ))}
+      <h3>Footer text</h3>
     </>
   );
 }
 
 function PageTwo() {
-  const arr = [0,1,2,3,4,5,6,7,8,9]
+  const arr = [11,12,13,14,15,16,17,18,19,20]
   return (
     <>
       <h2>Page Two</h2>
-      {arr.map(i => <div key={i} className="dragon"></div>)}
-      <h3>Dragon</h3>
+      {arr.map(i => (
+        <div className="random" key={i}>
+          <img src={`https://picsum.photos/200/300?random=${i}`} alt="random pic" />
+          <p>{i}. I am a caption</p>
+        </div>
+      ))}
+      <h3>Footer text</h3>
     </>
   );
 }

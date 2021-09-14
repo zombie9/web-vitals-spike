@@ -31,12 +31,8 @@ body {
   background-size: cover;
 }
 
-.dragon {
-  background: url('https://randompicturegenerator.com/img/dragon-generator/g7e16b17653d70300e0d6c67f174ff747deb34b0b93771166010a8ff259e1be8a5d37c33a9806d96e39ca55ef59194eb8_640.jpg');
-  height: 300px;
-  width: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
+.random {
   display: inline-block;
+  padding: 2px;
 }
 
