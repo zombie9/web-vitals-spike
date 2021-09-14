@@ -1,25 +1,71 @@
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import './App.css';
+import WebVitalsBar from "./WebVitalsBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <WebVitalsBar />  
+
+      <nav className="App-header">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/page1">Page1</Link>
+          </li>
+          <li>
+            <Link to="/page2">Page2</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="App">
+        <Switch>
+          <Route path="/page1">
+            <PageOne />
+          </Route>
+          <Route path="/page2">
+            <PageTwo />
+          </Route>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function PageOne() {
+  return (
+    <>
+      <h2>Page One</h2>
+      <div className="strawberry"></div>
+      <h3>Strawberry</h3>
+    </>
+  );
+}
+
+function PageTwo() {
+  return (
+    <>
+      <h2>Page Two</h2>
+      <div className="dragon"></div>
+      <h3>Dragon</h3>
+    </>
+  );
+}

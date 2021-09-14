@@ -1,38 +1,41 @@
+body {
+  margin: 0;
+  background-color: #282c34;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin: 0 48px;
+  min-height: 100vh;
+  color: #fff;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header ul {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header li {
+  list-style: none;
+  display: inline-block;
+  margin: 8px;
 }
+
+.strawberry {
+  background: url('https://randomwordgenerator.com/img/picture-generator/55e4d144485ba514f1dc8460962e33791c3ad6e04e507749712e79d39644c3_640.jpg');
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dragon {
+  background: url('https://randompicturegenerator.com/img/dragon-generator/g7e16b17653d70300e0d6c67f174ff747deb34b0b93771166010a8ff259e1be8a5d37c33a9806d96e39ca55ef59194eb8_640.jpg');
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

@@ -1,0 +1,17 @@
+.web-vitals-bar {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  padding: 10px 0 10px 48px;
+}
+
+.web-vitals-bar .heading {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.web-vitals-bar .web-vital {
+  display: inline-block;
+  padding-right: 20px;
+}
