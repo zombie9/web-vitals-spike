@@ -3,14 +3,14 @@ import { getCLS, getFID, getLCP, getTTFB } from 'web-vitals';
 import './WebVitalsBar.css';
 
 function WebVitalsBar() {
-  const [cls, setCLS] = useState(localStorage.getItem('latestCLS') || '???');
+  const [cls, setCLS] = useState(sessionStorage.getItem('latestCLS') || '???');
   const [ttfb, setTtfb] = useState(0)
   const [fid, setFID] = useState('???');
   const [lcp, setLCP] = useState('???');
 
   useEffect(() => {
       getCLS(cls => {
-          localStorage.setItem('latestCLS', cls.value);
+          sessionStorage.setItem('latestCLS', cls.value);
           setCLS(cls.value);
       });
       getFID(fid => setFID(fid.value));
