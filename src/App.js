@@ -61,10 +61,11 @@ function PageOne() {
 }
 
 function PageTwo() {
+  const arr = [0,1,2,3,4,5,6,7,8,9]
   return (
     <>
       <h2>Page Two</h2>
-      <div className="dragon"></div>
+      {arr.map(i => <div key={i} className="dragon"></div>)}
       <h3>Dragon</h3>
     </>
   );
