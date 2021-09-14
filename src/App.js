@@ -47,7 +47,13 @@ function App() {
 export default App;
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <>
+      <h2>Home</h2>
+      <h3>No shift here for getCLS to report</h3>
+      <p>But the plugin is including other routes</p>
+    </>
+  )
 }
 
 function PageOne() {
@@ -67,7 +73,7 @@ function PageOne() {
 }
 
 function PageTwo() {
-  const arr = [11,12,13,14,15,16,17,18,19,20]
+  const arr = [11,12,13,14,15,16,17,18,19,20,21,22,23,24]
   return (
     <>
       <h2>Page Two</h2>
